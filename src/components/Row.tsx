@@ -8,19 +8,18 @@ export default function Row({
   lead?: boolean;
   trail?: boolean;
 }) {
-  const [parsed, width] = parseProg(orderString);
+  const [parsed] = parseProg(orderString);
 
   return (
     <div className={`row ${trail ? "ml-[15px]" : "ml-auto"} mr-auto`}>
       <div
-        className="icontainer flex flex-row items-center"
-        style={{ width: width + (lead && trail ? 60 : lead || trail ? 30 : 0) }}
+        className="icontainer flex flex-row items-center justify-center"
       >
         {lead && <img src="src/assets/arr-right.png" />}
         {parsed.map((itemGroup, i) => {
           return itemGroup.length == 1
             ? formatItem(itemGroup[0], i, i < parsed.length - 1 ? ">" : "")
-            : itemGroup.map((item, j) => {
+            : itemGroup.map((item: string, j: number) => {
                 return formatItem(
                   item,
                   j,
