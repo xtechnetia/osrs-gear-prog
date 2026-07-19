@@ -8,7 +8,7 @@ function App() {
       <div className="text-[24px] font-bold fcorange">
         Tombs of Amascut Gear Progression
       </div>
-          <span className="textrow">updated as of 2026 July 42</span>
+          <span className="textrow">updated as of 2026 July 19</span>
       <Section
         title="Minimum Requirements"
         description="You are highly recommended to have these before starting ToA."
@@ -47,10 +47,10 @@ function App() {
         <Row orderString="shadow* & saracapei* & occult* & torms* & virtush* & bbarkt* & bbarkb* & eternals*" desc="Minimum mage gear when rebuilding." colCount="4" />
         <Row
           trail
-          orderString="magus > virtust & virtusb > vw $ bclaws > ancestralh & ancestralb $ virtush & virtusb > bmoonb > torture > rancour $ torture"
+          orderString="magus > cgaunts $ torms > virtust & virtusb > vw $ bclaws > ancestralh & ancestralb $ virtush & virtusb > bmoonb > torture"
         />
         <Row
-          orderString="masorih & masorit & masorib > zcb > ancestralt $ magus & virtust > fg > prims > avernic"
+          orderString="rancour $ torture > masorih & masorit & masorib > zcb > ancestralt $ magus & virtust > fg > prims > avernic"
         />
         <Row orderString="zcb*" desc="Worth selling non-core range upgrades to get sooner." />
       </Section>
@@ -71,7 +71,7 @@ function App() {
 
       <Section
         title=""
-        description="Original prog design by ulia\nCreated by the WDR ToA contributors"
+        description="Original prog design by ulia\nCreated by the WDR ToA community team"
       />
     </>
   );
