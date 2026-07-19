@@ -3,6 +3,7 @@ const IMG_DIR = "src/assets";
 
 function calculateGridCols(count: number): number {
   if (count <= 1) return 1;
+  if (count == 3) return 3;
   const sqrt = Math.sqrt(count);
   return Math.ceil(sqrt);
 };
@@ -14,7 +15,7 @@ function parseProg(progString: string): [string[][]] {
   return [splitString];
 }
 
-function formatItem(itemName: string, key: number, separator?: string) {
+function formatItem(itemName: string, key: number, separator?: string, colCount?: number) {
   const splitItems = itemName
     .split("$")
     .slice(0, 2)
@@ -33,6 +34,7 @@ function formatItem(itemName: string, key: number, separator?: string) {
 
   const sell = splitItems.length > 1;
 
+  const downArrowImg = `${IMG_DIR}/arr-down.png`;
   const separatorImg =
     separator == "+" ? `${IMG_DIR}/plus.png` : `${IMG_DIR}/arr-right.png`;
   
@@ -40,8 +42,8 @@ function formatItem(itemName: string, key: number, separator?: string) {
   const buyItems = splitItems[1] || [];
   const sellItemsCount = sellItems.length;
   const buyItemsCount = buyItems.length;
-  const sellGridCols = calculateGridCols(sellItemsCount);
-  const buyGridCols = calculateGridCols(buyItemsCount);
+  const sellGridCols = colCount || calculateGridCols(sellItemsCount);
+  const buyGridCols = colCount || calculateGridCols(buyItemsCount);
   
   return (
     <Fragment key={key}>
@@ -74,9 +76,9 @@ function formatItem(itemName: string, key: number, separator?: string) {
                   key={j}
                   className={`iblock bg-opacity-20 ${
                     sell
-                      ? "bg-[#B22222]/50"
+                      ? "bg-[#B22222]/30 crossed"
                       : itemName.includes("*")
-                      ? "bg-[#35c6d7]/50"
+                      ? "bg-[#35c6d7]/20"
                       : "bg-[#010101]/20"
                   }`}
                 >
@@ -87,7 +89,7 @@ function formatItem(itemName: string, key: number, separator?: string) {
               ))}
             </div>
           )}
-          
+          {sell && <img className="sellarrow" src={downArrowImg} />}
           {buyItemsCount > 0 && (
             <div
               className={`${

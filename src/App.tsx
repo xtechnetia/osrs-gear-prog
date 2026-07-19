@@ -8,24 +8,23 @@ function App() {
       <div className="text-[24px] font-bold fcorange">
         Tombs of Amascut Gear Progression
       </div>
-      <span className="textrow">November 4 2025</span>
+          <span className="textrow">updated as of 2026 July 42</span>
       <Section
         title="Minimum Requirements"
         description="You are highly recommended to have these before starting ToA."
       >
         <Row orderString="zhasta-- > tbp-- > swamptrident-- > dds-- > ddef-- > rpick-- > dcb-- > piety--"/>
         <Row orderString="torso-- > fcape-- > bringi-- > dboots-- > fury-- > bgloves-- > keris-- > rpouch-- "/>
-        <Row orderString="nezzy-- > occult-- > bbarkt-- > bbarkb-- > saracapei-- > bhidet-- > bhideb-- > accumulator--"/>
+        <Row orderString="nezzy-- > occult-- > bbarkt-- > bbarkb-- > saracapei-- > bhidet-- > bhideb-- > assembler-- > botd-- "/>
       </Section>
+    
       <Section
         title="Core Upgrades"
         description="Start from the left and follow the order."
       >
         <Row
-          trail
-          orderString="botd > dpick > fang > lb & bgs > rigour > buckler"
+          orderString="fang > lb & bgs > rigour > buckler > anguish > bclaws > feros > torms"
         />
-        <Row orderString="mbook > anguish > bclaws > torms > feros" />
       </Section>
 
       <Section
@@ -34,44 +33,45 @@ function App() {
       >
         <Row
           trail
-          orderString="masorih > masorit > masorib > ayak > cgaunts $ torms > vw $ bclaws"
+          orderString="masorih & masorit & masorib > ayak > mbook > cgaunts $ torms > vw $ bclaws > torture"
         />
         <Row
-          trail
-          orderString="torture > rancour $ torture > virtush > virtusb > virtust > bmoonb"
+          orderString="rancour $ torture > augury > virtush & virtust & virtusb > bmoonb > fg > prims"
         />
-        <Row orderString="fg > prims" />
       </Section>
 
       <Section
         title="Shadow Rebuild"
         description="Sell every secondary upgrade for shadow if possible."
       >
+        <Row orderString="shadow* & saracapei* & occult* & torms* & virtush* & bbarkt* & bbarkb* & eternals*" desc="Minimum mage gear when rebuilding." colCount="4" />
         <Row
           trail
-          orderString="shadow > torms > virtush > eternals > virtusb > virtust > bclaws"
+          orderString="magus > virtust & virtusb > vw $ bclaws > ancestralh & ancestralb $ virtush & virtusb > bmoonb > torture > rancour $ torture"
         />
         <Row
-          trail
-          orderString="vw $ bclaws > magus > cgaunts > augury > ancestralh $ virtush > ancestralb $ virtusb > bmoonb"
+          orderString="masorih & masorit & masorib > zcb > ancestralt $ magus & virtust > fg > prims > avernic"
         />
-        <Row
-          trail
-          orderString="torture > rancour $ torture > masorih > masorit > masorib > zcb > ancestralt $ magus & virtust"
-        />
-        <Row orderString="fg > prims > avernic" />
+        <Row orderString="zcb*" desc="Worth selling non-core range upgrades to get sooner." />
       </Section>
 
       <Section
         title="Tertiary Upgrades"
-        description="Do NOT sell shadow/ancestral pieces for any of these items, including the twisted bow."
+        description="Only to be considered after shadow and all secondary upgrades.\nDo NOT sell mage gear or zcb for any of these items, including the twisted bow.\nConsult ToA advice channels for more information on these upgrades."
       >
-        <Row orderString="atreads > tbow > torvab > torvat > torvah > zvambs" />
+        <Row
+          orderString="atreads*"
+          desc="Eternals upgrade maxes shadow damage without magus ring."
+        />
+        <Row
+          orderString="atreads > ayak & tbow & rupture & zvambs & ultor & torvah & torvat & torvab & rapier"
+          colCount="9"
+        />
       </Section>
 
       <Section
         title=""
-        description="Note: Bow of Faerdhinen setups are inferior to Masori setups.\nThey should only be used by irons or temporarily while obtaining cape upgrades."
+        description="Original prog design by ulia\nCreated by the WDR ToA contributors"
       />
     </>
   );

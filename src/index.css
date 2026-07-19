@@ -66,6 +66,19 @@ body {
   line-height: 20px;
 }
 
+.line {
+  width: 700px;
+  height: 0;
+  border: 1px solid #C4C4C4;
+  margin: 3px;
+  display:inline-block;
+}
+
+.infodesc {
+  padding-left: 20px;
+  color: #b6b6b6;
+}
+
 .icontainer {
   margin-left: auto;
   margin-right: auto;
@@ -110,4 +123,26 @@ body {
 
 .iseparator-triple img {
   margin-top: 55px;
+}
+
+.crossed {
+  position: relative;
+  border: 2px solid #333;
+  overflow: hidden;
+}
+
+.crossed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, transparent calc(50% - 1px), #cc0000 calc(50% - 2px), #cc0000 calc(50% + 2px), transparent calc(50% + 1px));
+  pointer-events: none;
+}
+
+.sellarrow {
+  margin-top: 40px;
+  position: absolute;
 }

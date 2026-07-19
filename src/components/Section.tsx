@@ -13,6 +13,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <div>
+      <div className="line"></div>
       <div className="textrow fs14 description">
         <span className="fs18 font-semibold">{title}</span>
         <br />
