@@ -8,7 +8,7 @@ function App() {
       <div className="text-[24px] font-bold fcorange">
         Tombs of Amascut Gear Progression
       </div>
-          <span className="textrow">updated as of 2026 July 19</span>
+          <span className="textrow">updated as of 2026 July 20</span>
       <Section
         title="Minimum Requirements"
         description="You are highly recommended to have these before starting ToA."
@@ -23,7 +23,7 @@ function App() {
         description="Start from the left and follow the order."
       >
         <Row
-          orderString="fang > lb & bgs > rigour > buckler > anguish > bclaws > feros > torms"
+          orderString="fang > lb & bgs > rigour > buckler > anguish > bclaws > feros > serp > torms"
         />
       </Section>
 
@@ -44,20 +44,35 @@ function App() {
         title="Shadow Rebuild"
         description="Sell every secondary upgrade for shadow if possible."
       >
-        <Row orderString="shadow* & saracapei* & occult* & torms* & virtush* & bbarkt* & bbarkb* & eternals*" desc="Minimum mage gear when rebuilding." colCount="4" />
+        <Row
+          orderString="shadow* & saracapei* & occult* & torms* & virtush* & bbarkt* & bbarkb* & eternals*"
+          desc="Minimum mage gear when rebuilding."
+          colCount="4"
+        />
         <Row
           trail
-          orderString="magus > cgaunts $ torms > virtust & virtusb > vw $ bclaws > ancestralh & ancestralb $ virtush & virtusb > bmoonb > torture"
+          orderString="magus > cgaunts $ torms > virtust & virtusb > vw $ bclaws > ancestralh & ancestralb $ virtush & virtusb"
         />
         <Row
-          orderString="rancour $ torture > masorih & masorit & masorib > zcb > ancestralt $ magus & virtust > fg > prims > avernic"
+          orderString="torture > rancour $ torture > bmoonb > fg > prims > masorih & masorit & masorib"
         />
-        <Row orderString="zcb*" desc="Worth selling non-core range upgrades to get sooner." />
       </Section>
-
+      <Section
+        title="Shadow + Zcb Rebuild"
+        description="Sell secondary melee and range upgrades for zcb. Do NOT sell mage gear."
+      >
+        <Row trail orderString="shadow* & zcb*" />
+        <Row
+          trail
+          orderString="ancestralt $ magus & virtust > vw $ bclaws > torture > rancour $ torture > bmoonb"
+        />
+        <Row
+          orderString="fg > prims > avernic > masorih & masorit & masorib"
+        />
+      </Section>
       <Section
         title="Tertiary Upgrades"
-        description="Only to be considered after shadow and all secondary upgrades.\nDo NOT sell mage gear or zcb for any of these items, including the twisted bow.\nConsult ToA advice channels for more information on these upgrades."
+        description="Only to be considered after all prior upgrades.\nDo NOT sell mage gear or zcb for any of these items, including the twisted bow.\nConsult ToA advice channels for more information on these upgrades."
       >
         <Row
           orderString="atreads*"
@@ -71,7 +86,7 @@ function App() {
 
       <Section
         title=""
-        description="Original prog design by ulia\nCreated by the WDR ToA community team"
+        description="Original prog design by ulia and Fujino Ayumu\nCodebase setup by Coronne\nCurrent revision created by DreamingNote\nCurrent revision input from Peekays, VladG123, toy Owner, HatiHroovit, Toa Scaler"
       />
     </>
   );
