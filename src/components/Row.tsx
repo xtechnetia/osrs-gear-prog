@@ -5,19 +5,21 @@ export default function Row({
   colCount,
   lead,
   trail,
+  leftAlign,
 }: {
   orderString: string;
   desc?: string;
   colCount?: number;
   lead?: boolean;
   trail?: boolean;
+  leftAlign?: boolean;
 }) {
   const [parsed] = parseProg(orderString);
 
   return (
     <div className={`row ${trail ? "ml-[15px]" : "ml-auto"} mr-auto`}>
       <div
-        className="icontainer flex flex-row items-center justify-center"
+        className={`icontainer flex flex-row items-center justify-${leftAlign ? "left" : "center"}`}
       >
         {lead && <img src="src/assets/arr-right.png" />}
         {parsed.map((itemGroup, i) => {
