@@ -8,7 +8,7 @@ function App() {
       <div className="text-[24px] font-bold fcorange">
         Tombs of Amascut Gear Progression
       </div>
-          <span className="textrow">updated as of 2026 July 20</span>
+          <span className="textrow">updated as of 2026 July 22</span>
       <Section
         title="Minimum Requirements"
         description="You are highly recommended to have these before starting ToA."
@@ -79,8 +79,8 @@ function App() {
           desc="Eternals upgrade maxes shadow damage without magus ring."
         />
         <Row
-          orderString="atreads > ayak & tbow & rupture & zvambs & ultor & torvah & torvat & torvab & rapier"
-          colCount="9"
+          orderString="atreads > ayak & tbow & rupture & zvambs & ralos & ultor & torvah & torvat & torvab & rapier"
+          colCount="10"
         />
       </Section>
 

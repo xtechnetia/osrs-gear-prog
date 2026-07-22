@@ -36,7 +36,10 @@ export default function Row({
                 );
               });
         })}
-        {desc && <span className="fs14 infodesc">{desc}</span>}
+        {desc && <span className="fs14 infodesc">
+            {desc?.split("\\n").map((d) => (
+              <p>{d}</p>
+            ))}</span>}
         {trail && <img src="src/assets/arr-right.png" />}
       </div>
     </div>
