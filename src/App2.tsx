@@ -73,6 +73,16 @@ function App2() {
               desc="For advanced team speedruns. Not needed for CA time."
             />
           </Section>
+          <Section
+            title="Tbow-based Setups"
+            description="For those with a tbow and no shadow."
+          >
+            <Row
+              leftAlign
+              orderString="tbow*"
+              desc="You must use blowpipe and/or eye on Akkha and obelisk. Tbow will be used at Zebak and wardens p2-p4.\nPrioritize Masori over mage gear in item progression. Do NOT neglect zcb.\nSell Masori for shadow rebuild unless needed elsewhere."
+            />
+          </Section>
         </div>
         <div className="column">
           <Section
