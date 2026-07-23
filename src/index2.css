@@ -16,6 +16,13 @@ body {
   padding-bottom: 50px;
 }
 
+.grid-container {
+  display: grid;
+  float: left;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .itemIcons{
   height: 30px;
   width: 30px;
@@ -67,7 +74,7 @@ body {
 }
 
 .line {
-  width: 700px;
+  width: 350px;
   height: 0;
   border: 1px solid #C4C4C4;
   margin: 3px;
@@ -76,6 +83,7 @@ body {
 
 .infodesc {
   padding-left: 20px;
+  text-align: left;
   color: #b6b6b6;
 }
 
